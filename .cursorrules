@@ -1,0 +1,20 @@
+Git Usage
+- Use the following prefixes for commit messages followed by a colon and a space:
+  - `feat:` - New features and functionality
+  - `fix:` - Bug fixes and error corrections
+  - `style:` - UI/UX changes and styling updates
+  - `perf:` - Performance optimizations
+  - `refactor:` - Code restructuring without changing functionality
+  - `content:` - Content updates (text, images, copy)
+  - `seo:` - SEO-related changes
+  - `analytics:` - Analytics implementation or updates
+  - `cms:` - Content management system changes
+  - `conversion:` - lead-conversion features like contact forms and scheduling
+  - `docs:` - Documentation updates
+  - `security:` - Security-related changes
+  - `a11y:` - Accessibility improvements
+  - `responsive:` - Responsive design updates
+  - `chore:` - Maintenance tasks, dependencies, and other non-functional changes
+- When determining the commit messages prefix, pick the most relevant prefix from the list above
+- Use lower case for commit messages
+- The commit message should also include a list of the changes made in the commit after the summary line if the changes are not self explanatory
