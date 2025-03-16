@@ -54,48 +54,104 @@ export default function Footer() {
         {/* Social Media Links */}
         <div className="flex flex-col items-end">
           <div className="flex space-x-4 mb-6">
-            <Link href="#" className="text-white hover:text-primary">
+            <Link
+              href="https://www.linkedin.com/company/TheExpertsVoice"
+              target="_blank"
+              className="text-white hover:text-primary"
+            >
               <SiLinkedin size={24} />
             </Link>
-            <Link href="#" className="text-white hover:text-primary">
+            <Link
+              href="https://www.facebook.com/TheExpertsVoice/"
+              target="_blank"
+              className="text-white hover:text-primary"
+            >
               <SiFacebook size={24} />
             </Link>
-            <Link href="#" className="text-white hover:text-primary">
+            <Link
+              href="https://x.com/TheExpertsVoice"
+              target="_blank"
+              className="text-white hover:text-primary"
+            >
               <SiX size={24} />
             </Link>
-            <Link href="#" className="text-white hover:text-primary">
+            <Link
+              href="https://www.instagram.com/theexpertsvoice/"
+              target="_blank"
+              className="text-white hover:text-primary"
+            >
               <SiInstagram size={24} />
             </Link>
-            <Link href="#" className="text-white hover:text-primary">
+            <Link
+              href="https://www.threads.net/@theexpertsvoice"
+              target="_blank"
+              className="text-white hover:text-primary"
+            >
               <SiThreads size={24} />
             </Link>
-            <Link href="#" className="text-white hover:text-primary">
+            <Link
+              href="https://www.tiktok.com/@theexpertsvoice"
+              target="_blank"
+              className="text-white hover:text-primary"
+            >
               <SiTiktok size={24} />
             </Link>
-            <Link href="#" className="text-white hover:text-primary">
+            <Link
+              href="https://www.youtube.com/@theexpertsvoice"
+              target="_blank"
+              className="text-white hover:text-primary"
+            >
               <SiYoutube size={24} />
             </Link>
           </div>
           <div className="flex space-x-4">
-            <Link href="#" className="text-white hover:text-primary">
+            <Link
+              href="https://open.spotify.com/show/4E1LY2jnJqmGsN0jpvtooX"
+              target="_blank"
+              className="text-white hover:text-primary"
+            >
               <SiSpotify size={24} />
             </Link>
-            <Link href="#" className="text-white hover:text-primary">
+            <Link
+              href="https://podcasts.apple.com/us/podcast/the-experts-voice/id1778965599"
+              target="_blank"
+              className="text-white hover:text-primary"
+            >
               <SiApplepodcasts size={24} />
             </Link>
-            <Link href="#" className="text-white hover:text-primary">
+            <Link
+              href="https://music.amazon.com/podcasts/4E1LY2jnJqmGsN0jpvtooX"
+              target="_blank"
+              className="text-white hover:text-primary"
+            >
               <SiAmazonmusic size={24} />
             </Link>
-            <Link href="#" className="text-white hover:text-primary">
+            <Link
+              href="https://castbox.fm/vh/6359788"
+              target="_blank"
+              className="text-white hover:text-primary"
+            >
               <SiCastbox size={24} />
             </Link>
-            <Link href="#" className="text-white hover:text-primary">
+            <Link
+              href="https://www.iheart.com/podcast/269-the-experts-voice-241329440/"
+              target="_blank"
+              className="text-white hover:text-primary"
+            >
               <SiIheartradio size={24} />
             </Link>
-            <Link href="#" className="text-white hover:text-primary">
+            <Link
+              href="https://overcast.fm/p4982508-iK8C8X"
+              target="_blank"
+              className="text-white hover:text-primary"
+            >
               <SiOvercast size={24} />
             </Link>
-            <Link href="#" className="text-white hover:text-primary">
+            <Link
+              href="https://pca.st/ki2fe09f"
+              target="_blank"
+              className="text-white hover:text-primary"
+            >
               <SiPocketcasts size={24} />
             </Link>
           </div>
