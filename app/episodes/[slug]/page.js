@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getPodcastEpisodes } from "@/app/utils/rss-parser";
-import parse from "html-react-parser";
+import { convertLinksToNextLinks } from "@/app/utils/link-converter";
 
 // Generate static params for all episodes
 export async function generateStaticParams() {
@@ -84,7 +84,7 @@ export default async function EpisodePage({ params }) {
               </p>
             )}
             <div className="flex flex-col gap-8 text-lg prose max-w-none">
-              {parse(episode.summary || "")}
+              {convertLinksToNextLinks(episode.summary || "")}
             </div>
           </div>
         </div>
