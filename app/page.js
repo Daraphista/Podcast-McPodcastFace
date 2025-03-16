@@ -19,6 +19,8 @@ import {
   SiYoutube,
 } from "react-icons/si";
 
+import { getPodcastEpisodes } from "@/app/utils/rss-parser";
+
 const logo = (
   <svg
     viewBox="0 0 672 150"
@@ -50,7 +52,13 @@ const logo = (
   </svg>
 );
 
-export default function Home() {
+export default async function Home() {
+  // Fetch podcast episodes
+  const podcastData = await getPodcastEpisodes(process.env.PODCAST_RSS_URL);
+
+  // Log the entire podcast data
+  console.log("Podcast Data:", JSON.stringify(podcastData, null, 2));
+
   return (
     <div>
       <header className="px-gutter py-8 bg-primary text-white">
@@ -181,34 +189,25 @@ export default function Home() {
               Recent Episodes
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
-              {[1, 2, 3, 4, 5, 6].map((episode) => (
+              {podcastData?.episodes?.map((episode, index) => (
                 <Link
                   href="/"
-                  key={episode}
+                  key={index}
                   className="bg-blue-100 group hover:-translate-y-2 duration-300 border-2 border-primary p-6 rounded-lg hover:shadow-lg transition-all"
                 >
                   <Image
-                    src={`/sample-episode-art.png`}
-                    alt={`Episode ${episode} Thumbnail`}
+                    src={`${episode.image}`}
+                    alt={`${episode.title} Thumbnail`}
                     width={400}
                     height={400}
                     className="w-24 aspect-square group-hover:scale-105 transition-transform duration-300 object-cover mb-6 rounded-md border-2 -mt-12 shadow-lg border-dark"
                   />
 
                   <h3 className="font-semibold text-2xl mb-2">
-                    Donovan Francis Breaks Down Business Immigration for
-                    Employers
+                    {episode.title}
                   </h3>
                   <p className="text-gray-600 mb-6 line-clamp-3">
-                    In this episode of The Expert's Voice, host Angelo Mendoza
-                    sits down with Donovan Francis, Founder of Gooselaw
-                    Immigration, as he breaks down the essentials of business
-                    immigration in Canada. Learn how employers can sponsor
-                    foreign talent, navigate work permits, and overcome common
-                    immigration challenges. Whether you're a business owner or
-                    an HR professional, this episode provides key insights to
-                    help you hire internationally with confidence. To find out
-                    more about Donovan Francis, visit: gooselaw.com.
+                    {episode.description}
                   </p>
                   <div className="flex justify-between items-center">
                     <div className="flex group-hover:translate-x-2 transition-transform duration-300 items-center gap-2 font-bold">

@@ -58,6 +58,12 @@ async function getPodcastEpisodes(feedUrl) {
       publishDate: item.pubDate,
       audioUrl: item.enclosure?.url,
       duration: item.itunes?.duration,
+      // Try to extract image from various possible locations
+      image:
+        item["itunes:image"]?.$text ||
+        item.image ||
+        item.enclosure?.image ||
+        feed.image?.url,
     }));
 
     return {
