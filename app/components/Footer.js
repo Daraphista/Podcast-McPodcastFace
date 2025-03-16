@@ -55,48 +55,48 @@ export default function Footer() {
         <div className="flex flex-col items-end">
           <div className="flex space-x-4 mb-6">
             <Link href="#" className="text-white hover:text-primary">
-              <SiLinkedin size={20} />
+              <SiLinkedin size={24} />
             </Link>
             <Link href="#" className="text-white hover:text-primary">
-              <SiFacebook size={20} />
+              <SiFacebook size={24} />
             </Link>
             <Link href="#" className="text-white hover:text-primary">
-              <SiX size={20} />
+              <SiX size={24} />
             </Link>
             <Link href="#" className="text-white hover:text-primary">
-              <SiInstagram size={20} />
+              <SiInstagram size={24} />
             </Link>
             <Link href="#" className="text-white hover:text-primary">
-              <SiThreads size={20} />
+              <SiThreads size={24} />
             </Link>
             <Link href="#" className="text-white hover:text-primary">
-              <SiTiktok size={20} />
+              <SiTiktok size={24} />
             </Link>
             <Link href="#" className="text-white hover:text-primary">
-              <SiYoutube size={20} />
+              <SiYoutube size={24} />
             </Link>
           </div>
           <div className="flex space-x-4">
             <Link href="#" className="text-white hover:text-primary">
-              <SiSpotify size={20} />
+              <SiSpotify size={24} />
             </Link>
             <Link href="#" className="text-white hover:text-primary">
-              <SiApplepodcasts size={20} />
+              <SiApplepodcasts size={24} />
             </Link>
             <Link href="#" className="text-white hover:text-primary">
-              <SiAmazonmusic size={20} />
+              <SiAmazonmusic size={24} />
             </Link>
             <Link href="#" className="text-white hover:text-primary">
-              <SiCastbox size={20} />
+              <SiCastbox size={24} />
             </Link>
             <Link href="#" className="text-white hover:text-primary">
-              <SiIheartradio size={20} />
+              <SiIheartradio size={24} />
             </Link>
             <Link href="#" className="text-white hover:text-primary">
-              <SiOvercast size={20} />
+              <SiOvercast size={24} />
             </Link>
             <Link href="#" className="text-white hover:text-primary">
-              <SiPocketcasts size={20} />
+              <SiPocketcasts size={24} />
             </Link>
           </div>
         </div>
