@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { getPodcastEpisodes } from "@/app/utils/rss-parser";
 import { convertLinksToNextLinks } from "@/app/utils/link-converter";
+import SpotifyEmbed from "@/app/components/SpotifyEmbed";
 
 // Generate static params for all episodes
 export async function generateStaticParams() {
@@ -68,21 +69,12 @@ export default async function EpisodePage({ params }) {
           </div>
         </div>
       </section>
+
       <section className="px-gutter py-section-default">
         <div className="container mx-auto px-4 py-8">
-          <div className="max-w-4xl mx-auto">
-            <Image
-              src={episode.image || "/sample-episode-art.png"}
-              alt={`${episode.title} Thumbnail`}
-              width={800}
-              height={400}
-              className="w-full aspect-video object-cover rounded-lg mb-8"
-            />
-            {episode.pubDate && (
-              <p className="text-gray-600 mb-4">
-                Published on: {new Date(episode.pubDate).toLocaleDateString()}
-              </p>
-            )}
+          <div className="max-w-4xl mx-auto flex flex-col gap-12">
+            <SpotifyEmbed episodeUri={"spotify:show:4E1LY2jnJqmGsN0jpvtooX"} />
+
             <div className="flex flex-col gap-8 text-lg prose max-w-none">
               {convertLinksToNextLinks(episode.summary || "")}
             </div>
