@@ -34,7 +34,9 @@ export default async function Home() {
               just want to stay informed, we've got you covered.
             </p>
             <div className="flex items-center gap-4 mt-12">
-              <button className="button is-dark mr-4">See all episodes</button>
+              <Link href="/episodes" className="button is-dark mr-4">
+                See all episodes
+              </Link>
 
               <div className="flex items-center gap-6">
                 <Link href="#" className="hover:text-dark">
@@ -123,7 +125,9 @@ export default async function Home() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <button className="button mx-auto">See All Episodes</button>
+            <Link href="/episodes" className="button mx-auto">
+              See All Episodes
+            </Link>
           </div>
         </div>
       </section>

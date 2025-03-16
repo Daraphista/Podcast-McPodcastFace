@@ -15,7 +15,7 @@ export default function Header() {
 
           <div className="flex items-center gap-8">
             <Link
-              href="/about"
+              href="/episodes"
               className="uppercase font-semibold hover:text-dark transition-colors"
             >
               Episodes
