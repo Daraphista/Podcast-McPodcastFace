@@ -2,7 +2,7 @@
 
 @layer components {
   .button {
-    @apply cursor-pointer bg-primary uppercase text-white py-3 px-6 rounded-full block font-semibold transition-colors hover:bg-light hover:text-primary;
+    @apply cursor-pointer bg-primary uppercase text-white py-3 px-6 rounded-full w-fit block font-semibold transition-colors hover:bg-light hover:text-primary;
   }
 
   .button.is-white {
