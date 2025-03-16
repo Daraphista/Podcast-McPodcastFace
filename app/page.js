@@ -72,7 +72,10 @@ export default function Home() {
             </div>
 
             {/* Right Column - New Episode */}
-            <Link href="/" className="relative col-span-2 group">
+            <Link
+              href="/"
+              className="relative col-span-2 group hover:-translate-y-2 transition-transform duration-300"
+            >
               <div className="relative overflow-hidden rounded-lg border-4 border-dark aspect-square">
                 <Image
                   src="/sample-episode-art.png"
