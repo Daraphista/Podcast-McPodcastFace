@@ -40,25 +40,53 @@ export default async function Home() {
               </Link>
 
               <div className="flex items-center gap-6">
-                <Link href="#" className="hover:text-dark">
+                <Link
+                  href="https://open.spotify.com/show/4E1LY2jnJqmGsN0jpvtooX"
+                  target="_blank"
+                  className="hover:text-dark"
+                >
                   <SiSpotify size={32} />
                 </Link>
-                <Link href="#" className="hover:text-dark">
+                <Link
+                  href="https://podcasts.apple.com/us/podcast/the-experts-voice/id1778965599"
+                  target="_blank"
+                  className="hover:text-dark"
+                >
                   <SiApplepodcasts size={32} />
                 </Link>
-                <Link href="#" className="hover:text-dark">
+                <Link
+                  href="https://music.amazon.com/podcasts/4a0e2b02-6985-4e29-a952-e5a121cdfc7b/the-experts-voice"
+                  target="_blank"
+                  className="hover:text-dark"
+                >
                   <SiAmazonmusic size={32} />
                 </Link>
-                <Link href="#" className="hover:text-dark">
+                <Link
+                  href="https://castbox.fm/vh/6359788"
+                  target="_blank"
+                  className="hover:text-dark"
+                >
                   <SiCastbox size={32} />
                 </Link>
-                <Link href="#" className="hover:text-dark">
+                <Link
+                  href="https://www.iheart.com/podcast/269-the-experts-voice-241329440/"
+                  target="_blank"
+                  className="hover:text-dark"
+                >
                   <SiIheartradio size={32} />
                 </Link>
-                <Link href="#" className="hover:text-dark">
+                <Link
+                  href="https://overcast.fm/p4982508-iK8C8X"
+                  target="_blank"
+                  className="hover:text-dark"
+                >
                   <SiOvercast size={32} />
                 </Link>
-                <Link href="#" className="hover:text-dark">
+                <Link
+                  href="https://pca.st/ki2fe09f"
+                  target="_blank"
+                  className="hover:text-dark"
+                >
                   <SiPocketcasts size={32} />
                 </Link>
               </div>
