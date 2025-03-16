@@ -19,7 +19,6 @@ export default function EpisodeCard({ episode }) {
   return (
     <Link
       href={`/episodes/${slug}`}
-      target="_blank"
       className="bg-blue-100 group hover:-translate-y-2 duration-300 border-2 border-primary p-6 rounded-lg hover:shadow-lg transition-all"
     >
       <Image
