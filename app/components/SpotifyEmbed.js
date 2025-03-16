@@ -18,7 +18,7 @@ export default function SpotifyEmbed({ episodeUri }) {
   return (
     <>
       <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
-      <div id="embed-iframe" />
+      <div id="embed-iframe" className="w-full h-[152px]" />
     </>
   );
 }

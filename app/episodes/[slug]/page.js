@@ -2,6 +2,7 @@ import Image from "next/image";
 import { getPodcastEpisodes } from "@/app/utils/rss-parser";
 import { convertLinksToNextLinks } from "@/app/utils/link-converter";
 import SpotifyEmbed from "@/app/components/SpotifyEmbed";
+import { findSpotifyEpisodeUri } from "@/app/utils/spotify";
 
 // Generate static params for all episodes
 export async function generateStaticParams() {
@@ -47,6 +48,9 @@ export default async function EpisodePage({ params }) {
         .replace(/(^-|-$)/g, "") === params.slug
   );
 
+  // Find Spotify episode URI
+  const spotifyEpisodeUri = await findSpotifyEpisodeUri(episode.title);
+
   if (!episode) {
     return (
       <section className="px-gutter py-32">
@@ -73,7 +77,7 @@ export default async function EpisodePage({ params }) {
       <section className="px-gutter py-section-default">
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-4xl mx-auto flex flex-col gap-12">
-            <SpotifyEmbed episodeUri={"spotify:show:4E1LY2jnJqmGsN0jpvtooX"} />
+            <SpotifyEmbed episodeUri={spotifyEpisodeUri} />
 
             <div className="flex flex-col gap-8 text-lg prose max-w-none">
               {convertLinksToNextLinks(episode.summary || "")}
