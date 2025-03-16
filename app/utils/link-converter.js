@@ -15,7 +15,9 @@ export function convertLinksToNextLinks(htmlContent, options = {}) {
   const {
     customLinkComponent = Link,
     linkFilter = () => true,
-    defaultLinkProps = {},
+    defaultLinkProps = {
+      className: "text-primary hover:underline",
+    },
   } = options;
 
   return parse(htmlContent, {
@@ -34,6 +36,10 @@ export function convertLinksToNextLinks(htmlContent, options = {}) {
           href,
           ...restAttributes,
           ...defaultLinkProps,
+          // Merge existing class with default classes if a class already exists
+          className: [defaultLinkProps.className, restAttributes.className]
+            .filter(Boolean)
+            .join(" "),
         };
 
         // Handle external vs internal links
