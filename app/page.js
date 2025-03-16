@@ -141,7 +141,7 @@ export default function Home() {
 
       <main>
         <section className="px-gutter py-section-default lg:py-28 lg:pt-12 bg-primary text-white">
-          <div className="max-w-container-default mx-auto grid grid-cols-[0.5fr_1fr_0.5fr] gap-16 items-center">
+          <div className="max-w-container-default mx-auto grid grid-cols-1 lg:grid-cols-6 gap-16 items-center">
             {/* Left Column - Text Content */}
             <div className="space-y-6 col-span-4">
               <h1 className="text-h1 font-bold">Real Experts. Real Answers.</h1>
