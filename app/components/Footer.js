@@ -37,7 +37,7 @@ export default function Footer() {
         <div className="col-span-2">
           <nav className="flex justify-center gap-8">
             <Link
-              href="/about"
+              href="/episodes"
               className="uppercase font-semibold hover:text-primary transition-colors"
             >
               Episodes
