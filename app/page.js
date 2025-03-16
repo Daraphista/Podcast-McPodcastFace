@@ -20,6 +20,7 @@ import {
   SiIheartradio,
   SiOvercast,
   SiPocketcasts,
+  SiX,
 } from "react-icons/si";
 
 const logo = (
@@ -350,7 +351,7 @@ export default function Home() {
                 <FaInstagram size={24} />
               </Link>
               <Link href="#" className="text-gray-300 hover:text-white">
-                <FaTwitter size={24} />
+                <SiX size={24} />
               </Link>
               <Link href="#" className="text-gray-300 hover:text-white">
                 <FaLinkedin size={24} />
