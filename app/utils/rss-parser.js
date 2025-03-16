@@ -52,19 +52,19 @@ async function getPodcastEpisodes(feedUrl) {
     const { feed, items } = await fetchRssFeed(feedUrl);
 
     // Transform items to extract key podcast episode information
-    const episodes = items.map((item) => ({
-      title: item.title,
-      description: item.description,
-      publishDate: item.pubDate,
-      audioUrl: item.enclosure?.url,
-      duration: item.itunes?.duration,
-      // Try to extract image from various possible locations
-      image:
-        item["itunes:image"]?.$text ||
-        item.image ||
-        item.enclosure?.image ||
-        feed.image?.url,
-    }));
+    const episodes = items.map((item) => {
+      console.log(item);
+
+      return {
+        title: item.title,
+        summary: item.itunes.summary,
+        publishDate: item.pubDate,
+        audioUrl: item.enclosure?.url,
+        duration: item.itunes?.duration,
+        // Try to extract image from various possible locations
+        image: item.itunes.image,
+      };
+    });
 
     return {
       podcastInfo: feed,
