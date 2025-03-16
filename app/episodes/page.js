@@ -36,7 +36,7 @@ export default async function Episodes() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 gap-x-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 gap-x-10">
             {podcastData?.episodes?.map((episode, index) => (
               <EpisodeCard key={index} episode={episode} />
             ))}

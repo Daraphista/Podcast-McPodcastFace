@@ -14,7 +14,7 @@
   }
 
   .text-h1 {
-    @apply font-bold text-6xl lg:text-5xl;
+    @apply font-bold text-4xl lg:text-5xl;
   }
   .text-h2 {
     @apply font-bold text-3xl lg:text-4xl;

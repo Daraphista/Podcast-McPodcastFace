@@ -8,7 +8,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link
             href="/"
-            className="w-fit block h-12 hover:text-dark transition-colors duration-300"
+            className="w-fit block h-8 lg:h-12 hover:text-dark transition-colors duration-300"
           >
             <Logo />
           </Link>

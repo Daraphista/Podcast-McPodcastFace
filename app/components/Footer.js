@@ -21,10 +21,10 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-dark text-white py-16">
-      <div className="max-w-container-default mx-auto grid items-center grid-cols-1 md:grid-cols-4 gap-12">
+    <footer className="bg-dark text-white py-16 px-gutter">
+      <div className="max-w-container-default mx-auto grid items-center grid-cols-1 lg:grid-cols-4 gap-12">
         {/* Logo and Description */}
-        <div>
+        <div className="items-start">
           <Link
             href="/"
             className="w-fit block hover:text-primary transition-colors duration-300"
@@ -34,8 +34,8 @@ export default function Footer() {
         </div>
 
         {/* Navigation Links */}
-        <div className="col-span-2">
-          <nav className="flex justify-center gap-8">
+        <div className="items-start lg:col-span-2">
+          <nav className="flex justify-start flex-wrap lg:justify-center gap-8">
             <Link
               href="/episodes"
               className="uppercase font-semibold hover:text-primary transition-colors"
@@ -52,7 +52,7 @@ export default function Footer() {
         </div>
 
         {/* Social Media Links */}
-        <div className="flex flex-col items-end">
+        <div className="flex flex-col items-start lg:items-end">
           <div className="flex space-x-4 mb-6">
             <Link
               href="https://www.linkedin.com/company/TheExpertsVoice"
@@ -159,7 +159,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="mt-16 text-center">
+      <div className="mt-16 text-start lg:text-center">
         <p className="text-gray-500">
           © {new Date().getFullYear()} The Experts Voice Podcast. All rights
           reserved.

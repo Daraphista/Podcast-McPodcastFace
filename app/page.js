@@ -34,12 +34,12 @@ export default async function Home() {
               you're preparing for a legal case, looking for expert insights, or
               just want to stay informed, we've got you covered.
             </p>
-            <div className="flex items-center gap-4 mt-12">
+            <div className="flex items-center flex-wrap gap-y-12 gap-4 mt-12">
               <Link href="/episodes" className="button is-dark mr-4">
                 See all episodes
               </Link>
 
-              <div className="flex items-center gap-6">
+              <div className="flex items-center flex-wrap gap-6">
                 <Link
                   href="https://open.spotify.com/show/4E1LY2jnJqmGsN0jpvtooX"
                   target="_blank"
@@ -100,7 +100,7 @@ export default async function Home() {
                 .toLowerCase()
                 .replace(/[^a-z0-9]+/g, "-")
                 .replace(/(^-|-$)/g, "")}`}
-              className="relative col-span-2 group hover:-translate-y-2 transition-transform duration-300"
+              className="relative w-fit lg:col-span-2 group hover:-translate-y-2 transition-transform duration-300"
             >
               <div className="relative overflow-hidden rounded-lg border-4 border-dark aspect-square">
                 <Image
