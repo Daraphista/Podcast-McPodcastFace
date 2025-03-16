@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer components {
+  .button {
+    @apply cursor-pointer bg-primary uppercase text-white py-3 px-6 rounded-full block font-semibold transition-colors hover:bg-light hover:text-primary;
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  .button.is-white {
+    @apply bg-white text-primary hover:bg-primary hover:text-light;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .button.is-dark {
+    @apply bg-dark text-light hover:bg-white hover:text-dark;
+  }
+
+  .text-h1 {
+    @apply font-bold text-6xl lg:text-5xl;
+  }
+  .text-h2 {
+    @apply font-bold text-3xl lg:text-4xl;
+  }
+  .text-h3 {
+    @apply font-bold text-2xl lg:text-3xl;
+  }
+  .text-h4 {
+    @apply font-bold text-xl lg:text-2xl;
+  }
+  .text-h5 {
+    @apply font-bold text-lg lg:text-xl;
+  }
+  .text-h6 {
+    @apply font-bold text-base lg:text-lg;
+  }
+
+  .px-gutter {
+    @apply px-[5%];
+  }
+  .py-section-default {
+    @apply py-8 lg:py-16;
+  }
+  .max-w-container-default {
+    @apply max-w-screen-xl;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  /* montserrat-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/montserrat-v29-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* montserrat-italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Montserrat";
+    font-style: italic;
+    font-weight: 400;
+    src: url("/fonts/montserrat-v29-latin-italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* montserrat-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/montserrat-v29-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+}
+
+@theme {
+  --color-dark: #001845;
+  --color-primary: #0466c8;
+  --color-light: #93c5fd;
+
+  --font-body: "Montserrat", sans-serif;
 }
