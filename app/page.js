@@ -186,7 +186,7 @@ export default async function Home() {
             <h2 className="text-h2 font-bold text-center mb-12">
               Recent Episodes
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 gap-x-10">
               {podcastData?.episodes?.slice(0, 6).map((episode, index) => (
                 <EpisodeCard key={index} episode={episode} />
               ))}
