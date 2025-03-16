@@ -84,22 +84,24 @@ export default function Home() {
                   height={400}
                   className=""
                 />
-                <div className="absolute flex gap-2 items-center justify-center inset-0 bg-light capitalize opacity-0 group-hover:opacity-95 transition-opacity font-bold text-xl text-dark">
-                  Listen Now
-                  <svg
-                    className="h-6 text-dark"
-                    viewBox="0 0 36 37"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M18 6.125C9.92109 6.125 3.375 12.6711 3.375 20.75V28.0625C3.375 28.9977 2.62266 29.75 1.6875 29.75C0.752344 29.75 0 28.9977 0 28.0625V20.75C0 10.8078 8.05781 2.75 18 2.75C27.9422 2.75 36 10.8078 36 20.75V28.0625C36 28.9977 35.2477 29.75 34.3125 29.75C33.3773 29.75 32.625 28.9977 32.625 28.0625V20.75C32.625 12.6711 26.0789 6.125 18 6.125ZM5.625 25.25C5.625 22.768 7.64297 20.75 10.125 20.75H11.25C12.4945 20.75 13.5 21.7555 13.5 23V32C13.5 33.2445 12.4945 34.25 11.25 34.25H10.125C7.64297 34.25 5.625 32.232 5.625 29.75V25.25ZM25.875 20.75C28.357 20.75 30.375 22.768 30.375 25.25V29.75C30.375 32.232 28.357 34.25 25.875 34.25H24.75C23.5055 34.25 22.5 33.2445 22.5 32V23C22.5 21.7555 23.5055 20.75 24.75 20.75H25.875Z"
-                      fill="currentColor"
-                    />
-                  </svg>
+                <div className="absolute flex items-center justify-center inset-0 bg-light capitalize opacity-0 group-hover:opacity-95 transition-opacity duration-300 font-bold text-xl text-dark">
+                  <div className="flex items-center gap-2 -translate-x-4 group-hover:translate-x-0 transition-transform duration-300">
+                    Listen Now
+                    <svg
+                      className="h-6 text-dark"
+                      viewBox="0 0 36 37"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18 6.125C9.92109 6.125 3.375 12.6711 3.375 20.75V28.0625C3.375 28.9977 2.62266 29.75 1.6875 29.75C0.752344 29.75 0 28.9977 0 28.0625V20.75C0 10.8078 8.05781 2.75 18 2.75C27.9422 2.75 36 10.8078 36 20.75V28.0625C36 28.9977 35.2477 29.75 34.3125 29.75C33.3773 29.75 32.625 28.9977 32.625 28.0625V20.75C32.625 12.6711 26.0789 6.125 18 6.125ZM5.625 25.25C5.625 22.768 7.64297 20.75 10.125 20.75H11.25C12.4945 20.75 13.5 21.7555 13.5 23V32C13.5 33.2445 12.4945 34.25 11.25 34.25H10.125C7.64297 34.25 5.625 32.232 5.625 29.75V25.25ZM25.875 20.75C28.357 20.75 30.375 22.768 30.375 25.25V29.75C30.375 32.232 28.357 34.25 25.875 34.25H24.75C23.5055 34.25 22.5 33.2445 22.5 32V23C22.5 21.7555 23.5055 20.75 24.75 20.75H25.875Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center gap-4 absolute uppercase -top-5 right-1/2 translate-x-1/2 p-2 bg-dark rounded-full font-bold text-lg text-nowrap pr-7">
+              <div className="flex items-center group-hover:-translate-y-10 transition-transform duration-300 gap-4 absolute uppercase -top-5 right-1/2 translate-x-1/2 p-2 bg-dark rounded-full font-bold text-lg text-nowrap pr-7">
                 <div className="rounded-full bg-light aspect-square w-8 p-1.5">
                   <svg
                     viewBox="0 0 43 43"
@@ -124,44 +126,44 @@ export default function Home() {
             <h2 className="text-h2 font-bold text-center mb-12">
               Recent Episodes
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
               {[1, 2, 3, 4, 5, 6].map((episode) => (
-                <div
+                <Link
+                  href="/"
                   key={episode}
-                  className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+                  className="bg-blue-100 group hover:-translate-y-2 duration-300 border-2 border-primary p-6 rounded-lg hover:shadow-lg transition-all"
                 >
                   <Image
                     src={`/sample-episode-art.png`}
                     alt={`Episode ${episode} Thumbnail`}
                     width={400}
-                    height={250}
-                    className="w-full h-48 object-cover"
+                    height={400}
+                    className="w-24 aspect-square object-cover mb-6 rounded-md border-2 -mt-12 shadow-lg border-dark"
                   />
-                  <div className="p-6">
-                    <h3 className="font-semibold text-xl mb-2">
-                      Episode {episode} Title
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Guest Name | Season X, Episode {episode}
-                    </p>
-                    <div className="flex justify-between items-center">
-                      <button className="flex items-center gap-2 font-bold">
-                        Listen Now
-                        <svg
-                          className="h-5 text-dark"
-                          viewBox="0 0 36 37"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M18 6.125C9.92109 6.125 3.375 12.6711 3.375 20.75V28.0625C3.375 28.9977 2.62266 29.75 1.6875 29.75C0.752344 29.75 0 28.9977 0 28.0625V20.75C0 10.8078 8.05781 2.75 18 2.75C27.9422 2.75 36 10.8078 36 20.75V28.0625C36 28.9977 35.2477 29.75 34.3125 29.75C33.3773 29.75 32.625 28.9977 32.625 28.0625V20.75C32.625 12.6711 26.0789 6.125 18 6.125ZM5.625 25.25C5.625 22.768 7.64297 20.75 10.125 20.75H11.25C12.4945 20.75 13.5 21.7555 13.5 23V32C13.5 33.2445 12.4945 34.25 11.25 34.25H10.125C7.64297 34.25 5.625 32.232 5.625 29.75V25.25ZM25.875 20.75C28.357 20.75 30.375 22.768 30.375 25.25V29.75C30.375 32.232 28.357 34.25 25.875 34.25H24.75C23.5055 34.25 22.5 33.2445 22.5 32V23C22.5 21.7555 23.5055 20.75 24.75 20.75H25.875Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
+
+                  <h3 className="font-semibold text-2xl mb-2">
+                    Episode {episode} Title
+                  </h3>
+                  <p className="text-gray-600 mb-6">
+                    Guest Name | Season X, Episode {episode}
+                  </p>
+                  <div className="flex justify-between items-center">
+                    <div className="flex group-hover:translate-x-2 transition-transform duration-300 items-center gap-2 font-bold">
+                      Listen Now
+                      <svg
+                        className="h-5 text-primary"
+                        viewBox="0 0 36 37"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18 6.125C9.92109 6.125 3.375 12.6711 3.375 20.75V28.0625C3.375 28.9977 2.62266 29.75 1.6875 29.75C0.752344 29.75 0 28.9977 0 28.0625V20.75C0 10.8078 8.05781 2.75 18 2.75C27.9422 2.75 36 10.8078 36 20.75V28.0625C36 28.9977 35.2477 29.75 34.3125 29.75C33.3773 29.75 32.625 28.9977 32.625 28.0625V20.75C32.625 12.6711 26.0789 6.125 18 6.125ZM5.625 25.25C5.625 22.768 7.64297 20.75 10.125 20.75H11.25C12.4945 20.75 13.5 21.7555 13.5 23V32C13.5 33.2445 12.4945 34.25 11.25 34.25H10.125C7.64297 34.25 5.625 32.232 5.625 29.75V25.25ZM25.875 20.75C28.357 20.75 30.375 22.768 30.375 25.25V29.75C30.375 32.232 28.357 34.25 25.875 34.25H24.75C23.5055 34.25 22.5 33.2445 22.5 32V23C22.5 21.7555 23.5055 20.75 24.75 20.75H25.875Z"
+                          fill="currentColor"
+                        />
+                      </svg>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
             <div className="text-center mt-12">
