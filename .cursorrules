@@ -1,3 +1,5 @@
+Don't use TypeScript.
+
 Git Usage
 - Use the following prefixes for commit messages followed by a colon and a space:
   - `feat:` - New features and functionality
