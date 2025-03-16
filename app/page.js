@@ -138,11 +138,12 @@ export default function Home() {
                     alt={`Episode ${episode} Thumbnail`}
                     width={400}
                     height={400}
-                    className="w-24 aspect-square object-cover mb-6 rounded-md border-2 -mt-12 shadow-lg border-dark"
+                    className="w-24 aspect-square group-hover:scale-105 transition-transform duration-300 object-cover mb-6 rounded-md border-2 -mt-12 shadow-lg border-dark"
                   />
 
                   <h3 className="font-semibold text-2xl mb-2">
-                    Episode {episode} Title
+                    Donovan Francis Breaks Down Business Immigration for
+                    Employers
                   </h3>
                   <p className="text-gray-600 mb-6">
                     Guest Name | Season X, Episode {episode}
@@ -167,9 +168,7 @@ export default function Home() {
               ))}
             </div>
             <div className="text-center mt-12">
-              <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-dark transition-colors">
-                View All Episodes
-              </button>
+              <button className="button mx-auto">View All Episodes</button>
             </div>
           </div>
         </section>
