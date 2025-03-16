@@ -8,7 +8,6 @@ export default function Contact() {
     <main>
       <section className="px-gutter py-section-default lg:py-28 lg:pt-12 bg-primary text-white">
         <div className="max-w-container-default mx-auto grid grid-cols-1 gap-16 items-center">
-          {/* Left Column - Text Content */}
           <div className="flex items-center justify-center">
             <h1 className="text-h1 font-bold">Contact</h1>
           </div>

@@ -10,9 +10,16 @@ export function removeLinks(htmlString) {
 }
 
 export default function EpisodeCard({ episode }) {
+  // Create URL-friendly slug from episode title
+  const slug = episode.title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
   return (
     <Link
-      href="/"
+      href={`/episodes/${slug}`}
+      target="_blank"
       className="bg-blue-100 group hover:-translate-y-2 duration-300 border-2 border-primary p-6 rounded-lg hover:shadow-lg transition-all"
     >
       <Image
