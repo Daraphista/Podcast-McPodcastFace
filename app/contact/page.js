@@ -35,7 +35,7 @@ export default function Contact() {
 
             {/* Right Column - Contact Form */}
             <div>
-              <form className="space-y-12" action="" netlify>
+              <form className="space-y-12" method="POST" netlify>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2 flex flex-col">
                     <label htmlFor="name">First Name</label>
