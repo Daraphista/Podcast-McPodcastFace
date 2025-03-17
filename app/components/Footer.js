@@ -161,7 +161,7 @@ export default function Footer() {
       {/* Copyright */}
       <div className="mt-16 text-start lg:text-center">
         <p className="text-gray-500">
-          © {new Date().getFullYear()} The Experts Voice Podcast. All rights
+          © {new Date().getFullYear()} The Expert's Voice Podcast. All rights
           reserved.
         </p>
       </div>
