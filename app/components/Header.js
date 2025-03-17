@@ -22,7 +22,7 @@ export default function Example() {
       >
         <Link
           href="/"
-          className="w-fit block h-8 lg:h-12 hover:text-dark transition-colors duration-300"
+          className="w-36 lg:w-54 block h-8 lg:h-12 hover:text-dark transition-colors duration-300"
         >
           <span className="sr-only">The Expert&apos;s Voice</span>
           <Logo />
@@ -60,6 +60,7 @@ export default function Example() {
             <Link
               href="/"
               className="h-8 lg:h-12 text-dark hover:text-primary transition-colors duration-300"
+              onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">The Expert&apos;s Voice</span>
               <Logo />
@@ -81,6 +82,7 @@ export default function Example() {
                     key={item.name}
                     href={item.href}
                     className=" font-semibold uppercase block text-dark hover:text-primary transition-colors duration-300"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
                   </Link>
