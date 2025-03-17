@@ -4,6 +4,9 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+    # Disable Turbopack in favor of Webpack
+    turbo = false
 
 [functions]
   included_files = ["public/contact.html"]
@@ -11,3 +14,11 @@
 [build.environment]
   NEXT_USE_NETLIFY_EDGE = "true"
   NEXT_FORCE_EDGE_IMAGES = "true"
+  # Force webpack instead of turbopack
+  NEXT_TURBO = "false"
+
+# Handle client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
