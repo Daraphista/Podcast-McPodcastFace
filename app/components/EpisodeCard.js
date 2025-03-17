@@ -29,7 +29,7 @@ export default function EpisodeCard({ episode }) {
         className="w-24 aspect-square group-hover:scale-105 transition-transform duration-300 object-cover mb-6 rounded-md border-2 -mt-12 shadow-lg border-dark"
       />
 
-      <h3 className="font-semibold text-2xl mb-2 line-clamp-2">
+      <h3 className="font-semibold text-lglg:text-2xl mb-2 line-clamp-3">
         {episode.title}
       </h3>
       {episode.summary && (
