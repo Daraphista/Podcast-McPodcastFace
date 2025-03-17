@@ -100,6 +100,14 @@ export default function ContactForm() {
 
   return (
     <>
+      {/* Hidden form for Netlify form detection */}
+      <form name="contact" data-netlify="true" hidden>
+        <input type="text" name="firstName" />
+        <input type="text" name="lastName" />
+        <input type="email" name="email" />
+        <textarea name="message"></textarea>
+      </form>
+
       <form
         className="space-y-12"
         onSubmit={handleSubmit}
