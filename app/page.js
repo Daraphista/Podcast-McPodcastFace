@@ -44,49 +44,49 @@ export default async function Home() {
                 <Link
                   href="https://open.spotify.com/show/4E1LY2jnJqmGsN0jpvtooX"
                   target="_blank"
-                  className="hover:text-dark"
+                  className="hover:text-dark transition-colors duration-300"
                 >
                   <SiSpotify size={32} />
                 </Link>
                 <Link
                   href="https://podcasts.apple.com/us/podcast/the-experts-voice/id1778965599"
                   target="_blank"
-                  className="hover:text-dark"
+                  className="hover:text-dark transition-colors duration-300"
                 >
                   <SiApplepodcasts size={32} />
                 </Link>
                 <Link
                   href="https://music.amazon.com/podcasts/4a0e2b02-6985-4e29-a952-e5a121cdfc7b/the-experts-voice"
                   target="_blank"
-                  className="hover:text-dark"
+                  className="hover:text-dark transition-colors duration-300"
                 >
                   <SiAmazonmusic size={32} />
                 </Link>
                 <Link
                   href="https://castbox.fm/vh/6359788"
                   target="_blank"
-                  className="hover:text-dark"
+                  className="hover:text-dark transition-colors duration-300"
                 >
                   <SiCastbox size={32} />
                 </Link>
                 <Link
                   href="https://www.iheart.com/podcast/269-the-experts-voice-241329440/"
                   target="_blank"
-                  className="hover:text-dark"
+                  className="hover:text-dark transition-colors duration-300"
                 >
                   <SiIheartradio size={32} />
                 </Link>
                 <Link
                   href="https://overcast.fm/p4982508-iK8C8X"
                   target="_blank"
-                  className="hover:text-dark"
+                  className="hover:text-dark transition-colors duration-300"
                 >
                   <SiOvercast size={32} />
                 </Link>
                 <Link
                   href="https://pca.st/ki2fe09f"
                   target="_blank"
-                  className="hover:text-dark"
+                  className="hover:text-dark transition-colors duration-300"
                 >
                   <SiPocketcasts size={32} />
                 </Link>
