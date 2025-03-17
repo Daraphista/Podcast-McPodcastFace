@@ -35,15 +35,19 @@ export default function Contact() {
 
             {/* Right Column - Contact Form */}
             <div>
-              <form className="space-y-12" action="">
+              <form
+                className="space-y-12"
+                action="https://formspree.io/f/mvgkgboj"
+                method="POST"
+              >
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2 flex flex-col">
                     <label htmlFor="name">First Name</label>
                     <input
                       className="rounded-lg border border-gray-300 p-2"
                       type="text"
-                      id="name"
-                      name="name"
+                      id="first-name"
+                      name="first-name"
                       required
                     />
                   </div>
@@ -52,8 +56,8 @@ export default function Contact() {
                     <input
                       className="rounded-lg border border-gray-300 p-2"
                       type="text"
-                      id="name"
-                      name="name"
+                      id="last-name"
+                      name="last-name"
                       required
                     />
                   </div>
