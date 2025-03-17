@@ -1,3 +1,5 @@
+import ContactForm from "@/app/components/ContactForm";
+
 export const metadata = {
   title: "Contact | The Expert's Voice",
   description: "Get in touch with The Expert's Voice Podcast team",
@@ -35,53 +37,7 @@ export default function Contact() {
 
             {/* Right Column - Contact Form */}
             <div>
-              <form className="space-y-12" method="POST" netlify>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-2 flex flex-col">
-                    <label htmlFor="name">First Name</label>
-                    <input
-                      className="rounded-lg border border-gray-300 p-2"
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2 flex flex-col">
-                    <label htmlFor="name">Last Name</label>
-                    <input
-                      className="rounded-lg border border-gray-300 p-2"
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                    />
-                  </div>
-                </div>
-                <div className="space-y-2 flex flex-col">
-                  <label htmlFor="email">Email</label>
-                  <input
-                    className="rounded-lg border border-gray-300 p-2"
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                  />
-                </div>
-                <div className="space-y-2 flex flex-col">
-                  <label htmlFor="message">Message</label>
-                  <textarea
-                    className="rounded-lg border border-gray-300 p-2"
-                    id="message"
-                    name="message"
-                    rows={8}
-                    required
-                  />
-                </div>
-                <button className="button" type="submit">
-                  Submit
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
