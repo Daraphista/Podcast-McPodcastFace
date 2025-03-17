@@ -42,5 +42,3 @@ export async function findSpotifyEpisodeUri(episodeTitle) {
     return null;
   }
 }
-
-export { getSpotifyAccessToken, findSpotifyEpisodeUri };

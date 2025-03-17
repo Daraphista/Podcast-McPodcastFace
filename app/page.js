@@ -28,11 +28,12 @@ export default async function Home() {
           <div className="space-y-6 lg:col-span-4">
             <h1 className="text-h1 font-bold">Real Experts. Real Answers.</h1>
             <p className="text-lg">
-              Navigating the legal world can be overwhelming. The Expert's Voice
-              Podcast brings you in-depth conversations with top legal
+              Navigating the legal world can be overwhelming. The Expert&apos;s
+              Voice Podcast brings you in-depth conversations with top legal
               professionals, answering the questions that matter most. Whether
-              you're preparing for a legal case, looking for expert insights, or
-              just want to stay informed, we've got you covered.
+              you&apos;re preparing for a legal case, looking for expert
+              insights, or just want to stay informed, we&apos;ve got you
+              covered.
             </p>
             <div className="flex items-center flex-wrap gap-y-12 gap-4 mt-12">
               <Link href="/episodes" className="button is-dark mr-4">

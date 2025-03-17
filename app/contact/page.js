@@ -23,13 +23,13 @@ export default function Contact() {
               <h2 className="text-h2 font-bold">Get in Touch</h2>
               <p className="text-lg">
                 Are you a legal expert interested in being featured on The
-                Expert's Voice Podcast? Or do you have a topic you'd like us to
-                cover? Let us know!
+                Expert&apos;s Voice Podcast? Or do you have a topic you&apos;d
+                like us to cover? Let us know!
               </p>
               <p className="text-lg">
-                We'd love to hear from you! Whether you have a legal question, a
-                guest suggestion, or just want to share your thoughts on the
-                podcast, we're here to listen.
+                We&apos;d love to hear from you! Whether you have a legal
+                question, a guest suggestion, or just want to share your
+                thoughts on the podcast, we&apos;re here to listen.
               </p>
             </div>
 

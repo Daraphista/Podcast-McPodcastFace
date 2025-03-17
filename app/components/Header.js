@@ -24,7 +24,7 @@ export default function Example() {
           href="/"
           className="w-fit block h-8 lg:h-12 hover:text-dark transition-colors duration-300"
         >
-          <span className="sr-only">The Expert's Voice</span>
+          <span className="sr-only">The Expert&apos;s Voice</span>
           <Logo />
         </Link>
         <div className="flex lg:hidden">
@@ -61,7 +61,7 @@ export default function Example() {
               href="/"
               className="h-8 lg:h-12 text-dark hover:text-primary transition-colors duration-300"
             >
-              <span className="sr-only">The Expert's Voice</span>
+              <span className="sr-only">The Expert&apos;s Voice</span>
               <Logo />
             </Link>
             <button

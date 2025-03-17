@@ -29,10 +29,11 @@ export default async function Episodes() {
               Engaging dialogues with seasoned legal professionals
             </h2>
             <p className="text-lg mb-12">
-              Each episode of The Expert's Voice Podcast provides in-depth
+              Each episode of The Expert&apos;s Voice Podcast provides in-depth
               analyses and practical advice on various legal matters. Whether
-              you're facing a legal challenge or simply wish to broaden your
-              understanding, our episodes offer valuable insights to guide you.
+              you&apos;re facing a legal challenge or simply wish to broaden
+              your understanding, our episodes offer valuable insights to guide
+              you.
             </p>
           </div>
 
