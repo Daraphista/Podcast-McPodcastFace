@@ -59,7 +59,7 @@ export default function Example() {
           <div className="flex items-center justify-between">
             <Link
               href="/"
-              className="h-8 lg:h-12 text-dark hover:text-primary transition-colors duration-300"
+              className="w-36 lg:w-54 h-8 lg:h-12 text-dark hover:text-primary transition-colors duration-300"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">The Expert&apos;s Voice</span>
