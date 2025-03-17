@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -19,23 +20,27 @@ export default function ContactForm() {
     }));
   };
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     try {
-      // Create a FormData object to submit the form
-      const formDataToSend = new FormData();
-      Object.entries(formData).forEach(([key, value]) => {
-        formDataToSend.append(key, value);
-      });
-
-      // For Netlify forms
-      formDataToSend.append("form-name", "contact");
-
-      // Submit the form data
+      // Using the recommended Netlify Forms approach for Next.js
       const response = await fetch("/", {
         method: "POST",
-        body: formDataToSend,
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": "contact",
+          ...formData,
+        }),
       });
 
       if (response.ok) {
@@ -51,17 +56,19 @@ export default function ContactForm() {
         });
       } else {
         console.error("Form submission failed");
-        // You could add error handling here
+        alert("There was an error submitting the form. Please try again.");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      // You could add error handling here
+      alert("There was an error submitting the form. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   if (isSubmitted) {
     return (
-      <div className="">
+      <div className="bg-white rounded-lg p-8 shadow-sm">
         <div className="text-center space-y-6">
           <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
             <svg
@@ -100,22 +107,20 @@ export default function ContactForm() {
 
   return (
     <>
-      {/* Hidden form for Netlify form detection */}
-      <form name="contact" data-netlify="true" hidden>
-        <input type="text" name="firstName" />
-        <input type="text" name="lastName" />
-        <input type="email" name="email" />
-        <textarea name="message"></textarea>
-      </form>
-
       <form
         className="space-y-12"
         onSubmit={handleSubmit}
         name="contact"
         method="POST"
         data-netlify="true"
+        netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="contact" />
+        <p className="hidden">
+          <label>
+            Don't fill this out if you're human: <input name="bot-field" />
+          </label>
+        </p>
 
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-2 flex flex-col">
@@ -168,16 +173,43 @@ export default function ContactForm() {
           />
         </div>
         <button
-          className="button"
+          className="button flex items-center justify-center"
           type="submit"
           disabled={
+            isSubmitting ||
             !formData.firstName ||
             !formData.lastName ||
             !formData.email ||
             !formData.message
           }
         >
-          Submit
+          {isSubmitting ? (
+            <>
+              <svg
+                className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+              Submitting...
+            </>
+          ) : (
+            "Submit"
+          )}
         </button>
       </form>
     </>
