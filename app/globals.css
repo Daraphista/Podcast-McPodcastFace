@@ -33,7 +33,7 @@
   }
 
   .px-gutter {
-    @apply px-[5%];
+    @apply px-6 md:px-10 lg:px-16;
   }
   .py-section-default {
     @apply py-8 lg:py-16;
