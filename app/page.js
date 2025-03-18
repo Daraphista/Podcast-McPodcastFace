@@ -40,7 +40,7 @@ export default async function Home() {
                 See all episodes
               </Link>
 
-              <div className="flex items-center flex-wrap gap-4 lg:gap-6">
+              <div className="flex items-center flex-wrap gap-4 md:gap-6">
                 <Link
                   href="https://open.spotify.com/show/4E1LY2jnJqmGsN0jpvtooX"
                   target="_blank"
