@@ -118,7 +118,7 @@ export default function ContactForm() {
           <div className="mb-6 flex items-start">
             <input type="checkbox" id="sms-consent" name="sms" className="mt-1 h-5 min-w-5 text-primary rounded-md border-gray-300 focus:ring-primary transition-colors duration-200 ease-in-out" required ></input>
             <label htmlFor="sms-consent" className="ml-3 text-gray-600 cursor-pointer select-none">
-                <span className="font-medium block">I Consent to Receive SMS Notifications, Alerts & Occasional Marketing Communication from The Expert&apos;s Voice Podcast. Message frequency varies. Message & data rates may apply. Text HELP to (314) 219-7887 for assistance. You can reply STOP to unsubscribe at any time.</span>
+                <span className="font-medium block">I Consent to Receive SMS Notifications, Alerts & Occasional Marketing Communication from The Expert&apos;s Voice Podcast. Message frequency varies. Message & data rates may apply. Text HELP to (570) 438-9807 for assistance. You can reply STOP to unsubscribe at any time.</span>
             </label>
           </div>
 
