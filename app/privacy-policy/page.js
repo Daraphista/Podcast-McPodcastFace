@@ -1,4 +1,4 @@
-export default function Contact() {
+export default function PrivacyPolicy() {
   return (
     <main>
       <section className="px-gutter py-section-default lg:py-28 lg:pt-12 bg-white">
