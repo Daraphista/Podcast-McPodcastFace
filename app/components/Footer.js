@@ -162,8 +162,12 @@ export default function Footer() {
       <div className="mt-16 text-start lg:text-center">
         <p className="text-gray-500">
           © {new Date().getFullYear()} The Expert&apos;s Voice Podcast. All
-          rights reserved.
+          rights reserved. 
         </p>
+        <div className="space-x-6 mt-4">
+          <a href="/privacy-policy" className="text-gray-500 underline hover:text-white">Privacy Policy</a>
+          <a href="/terms-of-service" className="text-gray-500 underline hover:text-white">Terms of Service</a>
+        </div>
       </div>
     </footer>
   );
